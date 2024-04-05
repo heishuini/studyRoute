@@ -1,6 +1,42 @@
 # 常用 Git 命令
 
+```
+　　Git基本常用命令如下：
+　　mkdir：         XX (创建一个空目录 XX指目录名)
+　　pwd：          显示当前目录的路径。
+　　git init          把当前的目录变成可以管理的git仓库，生成隐藏.git文件。
+　　git add XX       把xx文件添加到暂存区去。
+　　git commit –m “XX”  提交文件 –m 后面的是注释。
+　　git status        查看仓库状态
+　　git diff  XX      查看XX文件修改了那些内容
+　　git log          查看历史记录
+　　git reset  --hard HEAD^ 或者 git reset  --hard HEAD~ 回退到上一个版本
+　　(如果想回退到100个版本，使用git reset –hard HEAD~100 )
+　　cat XX         查看XX文件内容
+　　git reflog       查看历史记录的版本号id
+　　git checkout -- XX  把XX文件在工作区的修改全部撤销。
+　　git rm XX          删除XX文件
+　　git remote add origin GitHub - tugenhua0707/testgit 关联一个远程库
+　　git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库
+　　git clone GitHub - tugenhua0707/testgit  从远程库中克隆
+　　git checkout –b dev  创建dev分支 并切换到dev分支上
+　　git branch  查看当前所有的分支
+　　git checkout master 切换回master分支
+　　git merge dev    在当前的分支上合并dev分支
+　　git branch –d dev 删除dev分支
+　　git branch name  创建分支
+　　git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
+　　git stash list 查看所有被隐藏的文件列表
+　　git stash apply 恢复被隐藏的文件，但是内容不删除
+　　git stash drop 删除文件
+　　git stash pop 恢复文件的同时 也删除文件
+　　git remote 查看远程库的信息
+　　git remote –v 查看远程库的详细信息
+　　git push origin master  Git会把master分支推送到远程库对应的远程分支上
+```
+
 ## Git简介
+
 * Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 
 * Git是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 
 * Git与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。
@@ -15,9 +51,9 @@ Git 与 SVN 区别点：
 4. Git没有一个全局的版本号，而SVN有：目前为止这是跟SVN相比GIT缺少的最大的一个特征。
 5. Git的内容完整性要优于SVN：Git的内容存储使用的是SHA-1哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。
 
-经常使用 Git ，但是很多命令还是记不住。一般来说，日常使用只要记住下图7个命令就可以了。但要熟练掌握，恐怕要记住40~60个命令，所以整理了一份常用Git命令清单。
+经常使用 Git ，但是很多命令还是记不住。一般来说，日常使用只要记住就可以了。但要熟练掌握，恐怕要记住40~60个命令，所以整理了一份常用Git命令清单。
 
-![Git工作流程](https://raw.githubusercontent.com/JourWon/image/master/git/Git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png)
+
 
 * Workspace：工作区
 * Index / Stage：暂存区
@@ -268,15 +304,6 @@ $ git grep "Hello" v2.5
 # 生成一个可供发布的压缩包
 $ git archive
 ```
-## 附：Git常用命令速查表
-
-![Git常用命令速查表](https://raw.githubusercontent.com/JourWon/image/master/git/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8.jpg)
-
-
-## 附：Git指令速查表
-![Git指令速查表1](https://raw.githubusercontent.com/JourWon/image/master/git/Git%E6%8C%87%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A81.jpg)
-![Git指令速查表2](https://raw.githubusercontent.com/JourWon/image/master/git/Git%E6%8C%87%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A82.jpg)
-
 ## 附：资料链接
 [Git 常用命令总结](https://blog.csdn.net/tomatozaitian/article/details/73515849)
 [Git常用命令，很全很详细讲解的也不错](https://blog.csdn.net/afei__/article/details/51476529)
